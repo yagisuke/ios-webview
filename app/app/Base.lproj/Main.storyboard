@@ -49,15 +49,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9Y6-bd-YbN">
+                                <rect key="frame" x="340" y="35" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1gl-bV-bYN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H56-Ys-q8G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Y6-bd-YbN" secondAttribute="trailing" constant="15" id="Lmz-Fb-W4l"/>
                             <constraint firstItem="1gl-bV-bYN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="N2L-tg-k0S"/>
                             <constraint firstItem="TfO-01-gLd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WJ8-HW-snl"/>
                             <constraint firstItem="1gl-bV-bYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZKA-xS-UTU"/>
                             <constraint firstItem="1gl-bV-bYN" firstAttribute="top" secondItem="TfO-01-gLd" secondAttribute="bottom" id="ejz-e2-uzF"/>
                             <constraint firstItem="TfO-01-gLd" firstAttribute="top" secondItem="3Gf-XJ-9DX" secondAttribute="bottom" constant="10" id="nsb-Bj-Edc"/>
+                            <constraint firstItem="9Y6-bd-YbN" firstAttribute="centerY" secondItem="3Gf-XJ-9DX" secondAttribute="centerY" id="ooK-gd-dIC"/>
                             <constraint firstItem="3Gf-XJ-9DX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="qlQ-EN-bRI"/>
                             <constraint firstItem="3Gf-XJ-9DX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="un0-in-oGy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Gf-XJ-9DX" secondAttribute="trailing" constant="10" id="wna-t6-ePr"/>
@@ -67,6 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="AAN-KZ-bFE" id="D9o-4j-diT"/>
+                        <outlet property="browserActivityIndicator" destination="9Y6-bd-YbN" id="l0f-bH-gUn"/>
                         <outlet property="browserWebView" destination="TfO-01-gLd" id="cvD-dD-PVb"/>
                         <outlet property="forwardButton" destination="IYC-Ge-x7B" id="naX-EJ-sqy"/>
                         <outlet property="reloadButton" destination="VcE-sm-Q4t" id="cZ3-PW-pqk"/>

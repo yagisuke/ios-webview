@@ -84,7 +84,14 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
             self.showAlert("Invalid Alert")
             return nil
         }
-        return URL(string: urlString)
+        return URL(string: appendScheme(urlString))
+    }
+    
+    func appendScheme(_ urlString: String) -> String {
+        if URL(string: urlString)?.scheme == nil {
+            return "http://" + urlString
+        }
+        return urlString
     }
 
     func loadUrl(urlString: String) {

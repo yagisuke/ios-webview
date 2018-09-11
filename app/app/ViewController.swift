@@ -31,6 +31,13 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField != self.urlTextField {
+            return
+        }
+        textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField != self.urlTextField {
             return true

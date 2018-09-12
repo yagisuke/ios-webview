@@ -80,11 +80,12 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     }
     
     func getValidatedUrl(urlString: String) -> URL? {
-        if URL(string: urlString) == nil {
+        let trimmed = urlString.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        if URL(string: trimmed) == nil {
             self.showAlert("Invalid Alert")
             return nil
         }
-        return URL(string: appendScheme(urlString))
+        return URL(string: self.appendScheme(trimmed))
     }
     
     func appendScheme(_ urlString: String) -> String {
